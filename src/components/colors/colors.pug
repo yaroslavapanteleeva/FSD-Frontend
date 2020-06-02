@@ -1,0 +1,6 @@
+mixin colors({name, value, modifier})
+    .color
+        div(class='color__rect color__rect_bc_'+modifier)
+        .color__descr
+            .color__name= name
+            .color__value= value

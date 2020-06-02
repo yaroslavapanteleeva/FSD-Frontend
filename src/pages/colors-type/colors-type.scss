@@ -1,0 +1,12 @@
+@import '../../scss/variables';
+@import '../../layout/ui-base/ui-base';
+@import '../../components/colors/colors';
+
+.colors-type {
+    max-width: 1100px;
+    margin-top: 67px;
+    margin-left: 120px;
+    &__wrapper-colors {
+        max-width: 270px;
+    }
+}
