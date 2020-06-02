@@ -1,6 +1,7 @@
 extends ../../layout/ui-base/ui-base
 
 include ../../components/colors/colors
+include ../../components/type/type
 
 block title 
     | Colors & Type
@@ -43,4 +44,24 @@ block content
                 value: '#6FCF97'
             })
         .colors-type__wrapper-type
+            +type({
+                modifier: 'h1',
+                tag: 'H1',
+                text: 'This one is the sub-section or widget title'
+            })
+            +type({
+                modifier: 'h2',
+                tag: 'H2',
+                text: 'Next one is the item title inside widgets'
+            })
+            +type({
+                modifier: 'h3',
+                tag: 'H3',
+                text: 'This is a label or CTA text'
+            })
+            +type({
+                modifier: 'body',
+                tag: 'Body',
+                text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'
+            })
     

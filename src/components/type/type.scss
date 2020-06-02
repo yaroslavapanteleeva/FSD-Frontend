@@ -1,0 +1,53 @@
+@import '../../scss/variables';
+
+.type {
+    display: flex;
+    align-items: flex-start;
+}
+.tag {
+    font-family: $font-montserrat;
+    font-weight: 400;
+    text-align: right;
+    color: $color-dark-25;
+    margin: 0;
+    width: 37px;
+    &_h1 {
+        font-size: 24px;
+    }
+    &_h2 {
+        font-size: 19px;
+    }
+    &_h3 {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    &_body {
+        font-size: 14px;
+    }
+}
+.text {
+    font-family: $font-quicksand;
+    font-weight: 700;
+    color: $color-dark-100;
+    &_title {
+        font-size: 24px;
+    }
+    &_subtitle {
+        font-size: 19px;
+    }
+    &_label {
+        font-family: $font-montserrat;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    &_body {
+        font-family: $font-montserrat;
+        font-weight: 400;
+        font-size: 14px;
+        color: $color-dark-75;
+    }
+    
+
+}
+
+

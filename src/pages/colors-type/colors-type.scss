@@ -1,12 +1,19 @@
 @import '../../scss/variables';
 @import '../../layout/ui-base/ui-base';
 @import '../../components/colors/colors';
+@import '../../components/type/type';
 
 .colors-type {
     max-width: 1100px;
     margin-top: 67px;
     margin-left: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     &__wrapper-colors {
         max-width: 270px;
+    }
+    &__wrapper-type {
+        max-width: 403px;
     }
 }
