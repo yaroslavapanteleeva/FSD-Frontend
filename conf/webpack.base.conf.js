@@ -128,13 +128,14 @@ module.exports = {
         ...PAGES.map(page => new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/${page}/${page}.pug`,
             filename: `${page}.html`,
-        }))
-        /* new CopyWebpackPlugin({
+        })),
+        new CopyWebpackPlugin({
             patterns: [
                 {
-                   
+                    from: `${PATHS.src}/static/favicon`,
+                    to: ``
                 }
-            ],
-        }) */
+            ]
+        })
     ]
 };

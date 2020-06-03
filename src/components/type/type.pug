@@ -11,7 +11,7 @@ mixin type({modifier, tag, text})
             .text.text_label= text
         else
             div(class="tag tag_"+modifier)= tag
-            .text.text_body= text
+            .text.text_body!= text
 
 
 
