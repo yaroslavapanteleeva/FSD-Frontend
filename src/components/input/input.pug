@@ -1,0 +1,19 @@
+mixin input({label, state, placeholder, type, name, disabled})
+    .text-field
+        .label-wrapper
+            p(class="text text_label")= label
+            p(class="tag tag_h3 tag_h3_color")= state
+        if disabled
+            input(
+                class="text-field__input"
+                type=type,
+                name=name,
+                placeholder=placeholder
+            )
+        else
+            input(
+                class="text-field__input text-field__input_hover-focus"
+                type=type,
+                name=name,
+                placeholder=placeholder
+            )

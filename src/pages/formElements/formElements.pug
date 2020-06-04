@@ -1,0 +1,31 @@
+extends ../../layout/ui-base/ui-base
+
+include ../../components/input/input
+
+
+block title 
+    | Form Elements
+block content
+    .form-elememts
+        .group-1
+            +input({
+                label: 'text field',
+                state: 'Default',
+                placeholder: 'Email',
+                type: 'email',
+                name: 'email',
+                disabled: true
+            })
+            +input({
+                label: 'text field',
+                state: 'Hover / Focus',
+                placeholder: 'This is pretty awesome',
+                type: 'text',
+                name: 'text',
+                disabled: false
+            })
+
+        .group-2
+        .group-3
+        .group-4
+        .group-5

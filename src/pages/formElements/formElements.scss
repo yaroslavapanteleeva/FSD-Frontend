@@ -1,0 +1,53 @@
+@import '../../scss/variables';
+@import '../../layout/ui-base/ui-base';
+
+.form-elememts {
+    max-width: 1160px;
+    margin-top: 62px;
+    margin-left: 110px;
+    display: grid;
+    grid-template-columns: 374px 320px 320px;
+    grid-template-rows: 2fr 1fr;
+    grid-gap: 100px 72px;
+    grid-template-areas: "group-1 group-2 group-3"
+        "group-4 group-5 group-5"; 
+}
+
+.group-1 {
+    grid-area: group-1;
+}
+.group-2 {
+    grid-area: group-2;
+}
+.group-3 {
+    grid-area: group-3;
+}
+.group-4 {
+    grid-area: group-4;
+}
+.group-5 {
+    grid-area: group-5;
+}
+/* 
+
+.fille {
+    grid-area: fille;
+    height: 1323px;
+}
+.sect {
+    grid-area: sect;
+    height: 1323px;
+}
+.click {
+    grid-area: click;
+   height: 1323px;
+}
+.serviews {
+    grid-area: serviews;
+    height: 158px;
+}
+.reviews {
+    grid-area: reviews;
+    height: 158px;
+}
+ */

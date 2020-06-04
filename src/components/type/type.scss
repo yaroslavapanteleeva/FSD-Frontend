@@ -35,6 +35,10 @@
         font-size: 12px;
         text-transform: uppercase;
         line-height: 15px;
+        &_color {
+            color: $color-dark-50;
+            letter-spacing: -0.2px;
+        }
     }
     &_body {
         font-size: 14px;
@@ -45,6 +49,7 @@
     font-family: $font-quicksand;
     font-weight: 700;
     color: $color-dark-100;
+    margin: 0;
     &_title {
         font-size: 24px;
         line-height: 30px;
