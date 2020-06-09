@@ -1,0 +1,61 @@
+@import '../../scss/variables';
+
+.text-field {
+    max-width: 320px;
+    margin-bottom: 20px;
+    position: relative;
+    &__input {
+        padding: 13px 15px;
+        width: 100%;
+        max-height: 44px;
+        background: #FFFFFF;
+        border: 1px solid $color-dark-25;
+        border-radius: 4px;
+        box-sizing: border-box;
+        &::placeholder {
+            font-family: $font-montserrat;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: $color-dark-25;
+        }
+        &:hover, &:focus, &_hover-focus {
+            border: 1px solid $color-dark-50;
+            &::placeholder {
+                color: $color-dark-75;
+                letter-spacing: -0.2px;
+            } 
+        }
+        &_subscript {
+            width: 83%;
+        }
+    }
+    &__icon {
+        position: absolute;
+        top: 32%;
+        right: 17%;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        .material-icons {
+            font-family: $font-icons;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 24px;
+            background: $gradient-primary;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+        }
+    }
+}
+.label-wrapper {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+

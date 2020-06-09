@@ -1,0 +1,28 @@
+mixin text-field({label, state, placeholder, type, name, disabled, subscription})
+    .text-field
+        .label-wrapper
+            p(class="text text__label")= label
+            p(class="head head__h3 head__h3_color")= state
+        if disabled
+            input(
+                class="text-field__input text-body"
+                type=type,
+                name=name,
+                placeholder=placeholder
+            )
+        else if subscription
+            input(
+                class="text-field__input text-field__input_subscript text-body"
+                type=type,
+                name=name,
+                placeholder=placeholder
+            )
+            .text-field__icon
+                span.material-icons arrow_forward
+        else
+            input(
+                class="text-field__input text-field__input_hover-focus"
+                type=type,
+                name=name,
+                placeholder=placeholder
+            )

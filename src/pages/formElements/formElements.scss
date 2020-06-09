@@ -15,6 +15,15 @@
 
 .group-1 {
     grid-area: group-1;
+    &__container {
+        padding-top: 3px;
+        max-width: 320px;
+        .date-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
 }
 .group-2 {
     grid-area: group-2;
@@ -28,26 +37,3 @@
 .group-5 {
     grid-area: group-5;
 }
-/* 
-
-.fille {
-    grid-area: fille;
-    height: 1323px;
-}
-.sect {
-    grid-area: sect;
-    height: 1323px;
-}
-.click {
-    grid-area: click;
-   height: 1323px;
-}
-.serviews {
-    grid-area: serviews;
-    height: 158px;
-}
-.reviews {
-    grid-area: reviews;
-    height: 158px;
-}
- */

@@ -1,0 +1,36 @@
+
+mixin dropdown({label, state, value_0, value_1, value_2, value_3, dropdown, dateDropdown, filterDateDropdown})
+    if dropdown
+        .dropdown
+            .label-wrapper
+                p(class="text text__label")= label
+                p(class="head head__h3 head__h3_color")= state
+            .select
+                .select__header.text-field__input
+                    span(class="select__current text-body")= value_0
+                    .select__icon
+                        span.material-icons expand_more
+                .select__body
+                    div(class="select__item text text__label")= value_1
+                    div(class="select__item text text__label")= value_2
+                    div(class="select__item text text__label")= value_3
+    else if dateDropdown
+        .dropdown.date-dropdown
+            .label-wrapper
+                p(class="text text__label")= label
+                p(class="head head__h3 head__h3_color")= state
+            .select
+                .select__header.text-field__input
+                    span(class="select__current text-body")= value_0
+                    .select__icon
+                         span.material-icons expand_more         
+    else if filterDateDropdown
+        .dropdown.filter-dropdown
+            .label-wrapper
+                p(class="text text__label")= label
+                p(class="head head__h3 head__h3_color")= state
+            .select
+                .select__header.text-field__input
+                    span(class="select__current text-body")= value_0
+                    .select__icon
+                         span.material-icons expand_more

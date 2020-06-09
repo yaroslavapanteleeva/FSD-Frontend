@@ -1,0 +1,82 @@
+@import '../../scss/variables';
+
+.dropdown {
+    max-width: 320px;
+    margin-bottom: 20px;
+    .select.is-active .select__body {
+        display: block;
+        border-top: 1px solid $color-dark-25;
+    }
+    .select.is-active .select__header {
+        border-radius: 4px 4px 0 0;
+        border: 1px solid $color-dark-50;
+        border-bottom: 1px solid $color-dark-25;
+    }
+    .select.is-active .select__icon .material-icons {
+        color: $color-dark-75;
+    }
+    .select {
+        position: relative;
+        cursor: pointer;
+        &__header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-right: 0;
+        }
+        &__icon {
+            margin-left: auto;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            .material-icons {
+                font-family: $font-icons;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 24px;
+                color: $color-dark-50;
+                &:hover, &:focus {
+                    color: $color-dark-75;
+                }
+            }
+        }
+        &__body {
+            display: none;
+            background: #FFFFFF;
+            position: absolute;
+            padding: 13px 15px;
+            border-top: 0;
+	        left: 0;
+	        right: 0;
+            top: 100%;
+            border: 1px solid $color-dark-50;
+            box-sizing: border-box;
+            box-shadow: 0px 10px 20px $color-dark-5;
+            z-index: 100;
+        }
+        &__item {
+            margin-bottom: 22px;
+        }
+        
+    }
+}
+.date-dropdown {
+    margin-top: 20px;
+    width: 150px;
+    .select.is-active .select__header {
+        border-radius: 4px;
+        border-bottom: 1px solid $color-dark-50;
+    }
+}
+.filter-dropdown {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    max-width: 266px;
+    .select.is-active .select__header {
+        border-radius: 4px;
+        border-bottom: 1px solid $color-dark-50;
+    }
+}

@@ -1,17 +1,17 @@
-mixin type({modifier, tag, text})
+mixin type({element, tag, text})
     .type
-        if modifier == "h1"
-            h1(class="tag tag_"+modifier)= tag
-            .text.text_title= text
-        else if modifier == "h2"
-            h2(class="tag tag_"+modifier)= tag
-            .text.text_subtitle= text
-        else if modifier == "h3"
-            h3(class="tag tag_"+modifier)= tag
-            .text.text_label= text
+        if element == "h1"
+            h1(class="head head__"+element)= tag
+            .text.text__title= text
+        else if element == "h2"
+            h2(class="head head__"+element)= tag
+            .text.text__subtitle= text
+        else if element == "h3"
+            h3(class="head head__"+element)= tag
+            .text.text__label= text
         else
-            div(class="tag tag_"+modifier)= tag
-            .text.text_body!= text
+            div(class="head head__"+element)= tag
+            .text-body!= text
 
 
 

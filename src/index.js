@@ -1,10 +1,11 @@
 import 'normalize.css';
 
-function requireAll(requireContext) {
-    return requireContext.keys().map(requireContext);
+
+function importAll(resolve) {
+    resolve.keys().forEach(resolve);
 }
 
-requireAll(require.context('../src/', true, /\.js$|\.scss$/));
+importAll(require.context('../src/', true, /\.js$|\.scss$/));
 
 
 

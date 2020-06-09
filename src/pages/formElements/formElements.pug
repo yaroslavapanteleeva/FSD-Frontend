@@ -1,6 +1,7 @@
 extends ../../layout/ui-base/ui-base
 
-include ../../components/input/input
+include ../../components/text-field/text-field
+include ../../components/dropdown/dropdown
 
 
 block title 
@@ -8,22 +9,69 @@ block title
 block content
     .form-elememts
         .group-1
-            +input({
-                label: 'text field',
-                state: 'Default',
-                placeholder: 'Email',
-                type: 'email',
-                name: 'email',
-                disabled: true
-            })
-            +input({
-                label: 'text field',
-                state: 'Hover / Focus',
-                placeholder: 'This is pretty awesome',
-                type: 'text',
-                name: 'text',
-                disabled: false
-            })
+            .group-1__container
+                +text-field({
+                    label: 'text field',
+                    state: 'Default',
+                    placeholder: 'Email',
+                    type: 'email',
+                    name: 'email',
+                    disabled: true
+                })
+                +text-field({
+                    label: 'text field',
+                    state: 'Hover / Focus',
+                    placeholder: 'This is pretty awesome',
+                    type: 'text',
+                    name: 'text',
+                    disabled: false
+                })
+                +dropdown({
+                    label: 'dropdown',
+                    state: 'Default',
+                    value_0: 'Сколько гостей',
+                    value_1: 'Взрослые',
+                    value_2: 'Дети',
+                    value_3: 'Младенцы',
+                    dropdown: true
+                })
+                +text-field({
+                    label: 'masked text field',
+                    state: 'Default',
+                    type: 'text',
+                    name: 'dateField',
+                    placeholder: 'ДД.ММ.ГГГГ',
+                    disabled: true
+                })
+                .date-wrapper
+                    +dropdown({
+                        label: 'date Dropdown',
+                        state: '',
+                        value_0: 'ДД.ММ.ГГГГ',
+                        dateDropdown: true
+                    })
+                    +dropdown({
+                        label: 'date Dropdown',
+                        state: '',
+                        value_0: '19.08.2019',
+                        dateDropdown: true
+                    })
+                +dropdown({
+                    label: 'filter date dropdown',
+                    state: '',
+                    value_0: '19 авг - 23 авг',
+                    filterDateDropdown: true
+                })
+                +text-field({
+                    label: 'subscription text field',
+                    state: '',
+                    placeholder: 'Email',
+                    type: 'email',
+                    name: 'email',
+                    subscription: true
+                })
+                
+            
 
         .group-2
         .group-3

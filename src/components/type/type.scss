@@ -11,36 +11,36 @@
     &:last-child {
         margin-bottom: 0;
     }
-    .tag {
+    .head {
         min-width: 37px;
         margin-right: 30px;
     }
 }
-.tag {
+.head {
     font-family: $font-montserrat;
     font-weight: 400;
     text-align: right;
     color: $color-dark-25;
     text-align: right;
     margin: 0;
-    &_h1 {
+    &__h1 {
         font-size: 24px;
         line-height: 29px;
     }
-    &_h2 {
+    &__h2 {
         font-size: 19px;
         line-height: 23px;
     }
-    &_h3 {
+    &__h3 {
         font-size: 12px;
         text-transform: uppercase;
         line-height: 15px;
         &_color {
             color: $color-dark-50;
-            letter-spacing: -0.2px;
+            letter-spacing: -0.3px;
         }
     }
-    &_body {
+    &__body {
         font-size: 14px;
         line-height: 24px;
     }
@@ -50,27 +50,28 @@
     font-weight: 700;
     color: $color-dark-100;
     margin: 0;
-    &_title {
+    &__title {
         font-size: 24px;
         line-height: 30px;
     }
-    &_subtitle {
+    &__subtitle {
         font-size: 19px;
         line-height: 24px;
     }
-    &_label {
+    &__label {
         font-family: $font-montserrat;
         font-size: 12px;
         text-transform: uppercase;
         line-height: 15px;
     }
-    &_body {
-        font-family: $font-montserrat;
-        font-weight: 400;
-        font-size: 14px;
-        color: $color-dark-75;
-        line-height: 24px;
-    } 
 }
+.text-body {
+    font-family: $font-montserrat;
+    font-weight: 400;
+    font-size: 14px;
+    color: $color-dark-75;
+    line-height: 24px;
+    margin: 0;
+} 
 
 
