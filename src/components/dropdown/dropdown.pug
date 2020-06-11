@@ -11,9 +11,25 @@ mixin dropdown({label, state, value_0, value_1, value_2, value_3, dropdown, date
                     .select__icon
                         span.material-icons expand_more
                 .select__body
-                    div(class="select__item text text__label")= value_1
-                    div(class="select__item text text__label")= value_2
-                    div(class="select__item text text__label")= value_3
+                    .wrap
+                        div(class="select__item text text__label")= value_1
+                        .btn
+                            button(class="btn__switch" type="button",value="-",onclick="val.innerText>0?val.innerText--:val.innerText=0") - 
+                            span#val 0
+                            button(class="btn__switch" type="button", value="+", onclick="val.innerText++") +
+                    .wrap
+                        div(class="select__item text text__label")= value_2
+                        .btn
+                            button(class="btn__switch" type="button",value="-",onclick="val.innerText>0?val.innerText--:val.innerText=0") - 
+                            span#val2 0
+                            button(class="btn__switch" type="button", value="+", onclick="val.innerText++") +
+                    .wrap
+                        div(class="select__item text text__label")= value_3
+                        .btn
+                            button(class="btn__switch" type="button",value="-",onclick="val.innerText>0?val.innerText--:val.innerText=0") - 
+                            span#val3 0
+                            button(class="btn__switch" type="button", value="+", onclick="val.innerText++") +
+
     else if dateDropdown
         .dropdown.date-dropdown
             .label-wrapper

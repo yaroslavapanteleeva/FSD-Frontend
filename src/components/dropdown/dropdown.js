@@ -25,6 +25,30 @@ let select = function () {
 
 };
 
-
 select();
+
+function task1() {
+
+    let span = document.querySelectorAll('#val');
+    let btn = document.querySelector('.btn .btn__switch');
+    let result = document.querySelector('.select__header .select__current');
+  
+  
+    btn.addEventListener('click', resultBtn);
+  
+    function resultBtn() {
+      let inputSum = 0;
+  
+      for (let i = 0; i < span.length; i++) {
+  
+        inputSum += +span[i].value;
+      }
+      result.value = inputSum;
+    }
+
+    console.log('Hekko');
+  
+}
+
+task1();
 

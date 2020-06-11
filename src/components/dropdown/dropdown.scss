@@ -47,7 +47,7 @@
             display: none;
             background: #FFFFFF;
             position: absolute;
-            padding: 13px 15px;
+            padding: 7px 7px 13px 15px;
             border-top: 0;
 	        left: 0;
 	        right: 0;
@@ -56,9 +56,60 @@
             box-sizing: border-box;
             box-shadow: 0px 10px 20px $color-dark-5;
             z-index: 100;
+            .wrap {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 22px;
+            }
+            .btn {
+                
+                
+                &__switch {
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid $color-dark-25;
+                    box-sizing: border-box;
+                    border-radius: 22px;
+                    background-color: #FFFFFF;
+                    font-family: $font-montserrat;
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: $color-dark-50;
+                    cursor: pointer;
+                }
+                #val {
+                    margin: 0 12px;
+                    font-family: $font-montserrat;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 15px;
+                    text-transform: uppercase;
+                    color: $color-dark-100;
+                }
+                #val2 {
+                    margin: 0 12px;
+                    font-family: $font-montserrat;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 15px;
+                    text-transform: uppercase;
+                    color: $color-dark-100;
+                }
+                #val3 {
+                    margin: 0 12px;
+                    font-family: $font-montserrat;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 15px;
+                    text-transform: uppercase;
+                    color: $color-dark-100;
+                }
+                
+            }
         }
         &__item {
-            margin-bottom: 22px;
+            
         }
         
     }
