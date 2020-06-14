@@ -2,6 +2,7 @@ extends ../../layout/ui-base/ui-base
 
 include ../../components/text-field/text-field
 include ../../components/dropdown/dropdown
+include ../../components/checkbox/checkbox
 
 
 block title 
@@ -69,6 +70,9 @@ block content
                     type: 'email',
                     name: 'email',
                     subscription: true
+                })
+                +checkbox({
+                    title: 'expandable checkbox list'
                 })
                 
             
