@@ -12,8 +12,18 @@
     align-items: flex-start;
     &__wrapper-colors {
         max-width: 269px;
+        height: 610px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
     }
     &__wrapper-type {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         max-width: 403px;
+        height: 320px;
     }
+    
 }

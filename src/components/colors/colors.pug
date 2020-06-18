@@ -1,6 +1,19 @@
-mixin colors({name, value, modifier})
+mixin colors({name, value, color})
+
+    -
+        let colors = new Map();
+        colors.set('100', 'color__rect_bc_dark-100');
+        colors.set('75', 'color__rect_bc_dark-75');
+        colors.set('50', 'color__rect_bc_dark-50');
+        colors.set('25', 'color__rect_bc_dark-25');
+        colors.set('5', 'color__rect_bc_dark-5');
+        colors.set('primary', 'color__rect_bc_purple');
+        colors.set('secondary', 'color__rect_bc_green');
+
+        let classes = ['color__rect', colors.get(color)]
+
     .color
-        div(class="color__rect color__rect_bc_"+modifier)
+        div(class=classes)
         .color__descr
             .color__name= name
             .color__value= value

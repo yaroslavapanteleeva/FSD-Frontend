@@ -1,17 +1,21 @@
-mixin type({element, tag, text})
+mixin type({tag, title, text})
     .type
-        if element == "h1"
-            h1(class="head head__"+element)= tag
-            .text.text__title= text
-        else if element == "h2"
-            h2(class="head head__"+element)= tag
-            .text.text__subtitle= text
-        else if element == "h3"
-            h3(class="head head__"+element)= tag
-            .text.text__label= text
+        if tag == 'h1'
+            .head.head_level_first= title
+            .type__descr
+                h1.text.text__title!= text
+        else if tag == 'h2'
+            .head.head_level_second= title
+            .type__descr
+                h2.text.text__subtitle!= text
+        else if tag == 'h3'
+            .head.head_level_third= title
+            .type__descr
+                h3.text.text__label!= text
         else
-            div(class="head head__"+element)= tag
-            .text-body!= text
+            .head= title
+            .type__descr
+                .text.text__body!= text
 
 
 
