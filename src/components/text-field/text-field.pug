@@ -1,28 +1,16 @@
-mixin text-field({label, state, placeholder, type, name, disabled, subscription})
+mixin text-field({label, state, placeholder, type, name, focused=false, masked=false})
+
+    - let classes = ['text-field__input']
+
+    if focused
+        - classes.push('text-field__input_focused')
+    else if masked
+        - classes.push('js-masked')
+
     .text-field
-        .label-wrapper
-            p(class="text text__label")= label
-            p(class="head head__h3 head__h3_color")= state
-        if disabled
-            input(
-                class="text-field__input text-body"
-                type=type,
-                name=name,
-                placeholder=placeholder
-            )
-        else if subscription
-            input(
-                class="text-field__input text-field__input_subscript text-body"
-                type=type,
-                name=name,
-                placeholder=placeholder
-            )
-            .text-field__icon
-                span.material-icons arrow_forward
-        else
-            input(
-                class="text-field__input text-field__input_hover-focus"
-                type=type,
-                name=name,
-                placeholder=placeholder
-            )
+        input(
+            class=classes
+            type=type,
+            name=name,
+            placeholder=placeholder
+        )
