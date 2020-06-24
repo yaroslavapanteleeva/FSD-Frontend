@@ -1,0 +1,11 @@
+mixin radio({list, checked=false})
+    each item in list
+        label(class="radio")= item.text
+            input(
+                class="radio__input" 
+                type="radio" 
+                name=item.name 
+                checked=item.checked 
+                value=item.value
+            )
+            span.radio__mark
