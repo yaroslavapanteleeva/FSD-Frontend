@@ -1,0 +1,44 @@
+@import '../../scss/variables';
+
+.rating {
+    position: relative;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    width: 120px;
+    &__input {
+        position: absolute;
+        appearance: none;
+    }
+    &__star {
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        font-family: $font-icons;
+        font-weight: 400;
+        font-size: 24px;
+        cursor: pointer;
+        &::before {
+            content: 'star_border';
+            background: $gradient-primary;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;   
+        }
+        &:hover, &:hover ~ & {
+            background: $gradient-primary;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            &::before {
+                content: 'star';
+            }
+        }  
+    }
+    &__input:checked ~ &__star {
+        background: $gradient-primary;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &::before {
+            content: 'star';
+        }
+    }
+    
+}

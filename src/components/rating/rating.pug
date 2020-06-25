@@ -1,0 +1,5 @@
+mixin rating({list, checked=false})
+    .rating
+        each item in list
+            input.rating__input(type="radio", name=item.name, id=item.id value=item.value checked=item.checked)
+            label.rating__star(for=item.id aria-label=item.label)
